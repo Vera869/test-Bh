@@ -6,4 +6,4 @@
 
 Открой index.html в браузере
  
-Или
+Или перейди по ссылке https://vera869.github.io/test-Bh/
