@@ -11,50 +11,96 @@
 </head>
 <body>
    <div class="app" id="app">
-      <div class="modal">
+      <form class="modal">
          <h1 class="modal__header">Стать партнёром проекта</h1>
          <div class="modal__profile">
-            <div class="profile">
-               <input class="profile__input" type="text"> 
+            <div class="inputs-box">
+               <div class="inputs-box__input-blok">
                   <div class="lable">
                      <span class="lable__span">✱</span><span class="lable__txt">Название организации</span>
                   </div>
-                </input>
-               <input class="profile__input" type="tel"> 
+                  <input class="inputs-box__input-blok__input" input type="text" required autofocus />
+               </div>
+               <div class="inputs-box__input-blok">
                   <div class="lable">
                      <span class="lable__span">✱</span><span class="lable__txt">Телефон</span>
                   </div>
-               </input>
-               <input class="profile__input" type="email"> 
+                  <input class="inputs-box__input-blok__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /> 
+               </div>
+               <div class="inputs-box__input-blok">
                   <div class="lable">
                      <span class="lable__span">✱</span><span class="lable__txt">E-mail</span>
                   </div>
-               </input>
+                  <input class="inputs-box__input-blok__input" type="email" required /> 
                </div>
-               <!-- <div class="img-box>
-                  <div class="lable">
-                     <span class="lable__span">✱</span><span class="lable__txt">Название организации</span>
-                  </div>
-                  <img class="img-box__img" src="./img/Group 2409.png"/>
-               </div> -->
+            </div>
+            <div class="img-box">
+               <div class="lable">
+                  <span class="lable__span">✱</span><span class="lable__txt"> Логотип (jpeg, png)</span>
+               </div>
+               <img class="img-box__img" src="./img/avatar.png"/>
+            </div>
          </div>
 
          <div class="modal__input-box">
-            <input class="input-box">
-
-               <div class="lable">
-                  <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
-
-               </div>
-            </input>
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <div class="input-box">
+               <input class="input-box__input" input type="text" required  list="area"/>
+               <img src="./img/icon-color.png" class="input-box__icon"/>
+               <datalist class="input-box__datalist" id="area">
+                  <option value="Экономика"></option>
+                  <option value="Информационные технологии"></option>
+                  <option value="Высший и средний менеджмент"></option>
+                  <option value="Медицина, фармацевтика "></option>
+                  <option value="Продажи, обслуживание клиентов "></option>
+                  <option value="Другое"></option>
+               </datalist>
+            </div>
          </div>
+         <div class="modal__input-box"></div>
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
+         </div>
+         <div class="modal__input-box">
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
+         </div>
+         <div class="modal__input-box">
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
+         </div>
+         <div class="modal__input-box">
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
 
+         </div>
+         <div class="modal__input-box">
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
+         </div>
+         <div class="modal__input-box">
+            <div class="lable">
+               <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
+            </div>
+            <input class="input-box__input" input type="text" required />
+         </div>
          <div class="button-box">
             <button class="button-box__button">Стать партнёром проекта</button>
             <a class="button-box__button_link">отменить</a>
          </div>
-
-      </div>
+      </form>
    </div>
 </body>
 <script type="module" src="./index.js"></script>
