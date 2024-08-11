@@ -3,38 +3,15 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/svg+xml" href="/img/coders_brotherhood.png" />
+   <link rel="icon" type="image/svg+xml" href="./img/coders_brotherhood.png" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-   <title>Task 2</title>
+   <title>test for coders brotherhood</title>
    <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-   <div class="app" id="app">
-
-      <div class="main">
-         <div class="main__header"></div>
-         <div class="main__search-box" >
-            <button class="main__search-box__button" id="clear-button">
-               <span>Clear</span>
-            </button>
-            <input class="main__search-box__input" type="text" placeholder="search" id="search-input"/>
-            <button class="main__search-box__button" id="search-button">
-               <span>Search</span>
-            </button>
-         </div>
-
-         <div class="main__posts-box">
-            <table class="posts-box" id="posts-box">
-                             <!-- <tr class="posts-box__row">
-                  <th class="posts-box__row__title">title</th>
-                  <th class="posts-box__row__body">post</th>
-               </tr>
-               </tr> -->
-            </table>
-         </div>
-      </div>
+   <div class="modal-window" id="modal-window">
       <form class="modal" >
          <h1 class="modal__header">Стать партнёром проекта</h1>
          <div class="modal__profile">
@@ -49,7 +26,7 @@
                   <div class="lable">
                      <span class="lable__span">✱</span><span class="lable__txt">Телефон</span>
                   </div>
-                  <input class="inputs-box__input-blok__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /> 
+                  <input class="inputs-box__input-blok__input" type="tel" pattern="^\+\d{1} \d{3}\ \d{3}-\d{2}-\d{2}$" required /> 
                </div>
                <div class="inputs-box__input-blok">
                   <div class="lable">
@@ -71,69 +48,101 @@
                <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
             </div>
             <div class="input-box">
-               <input class="input-box__input" input type="text" required  list="area"/>
-               <img src="./img/arrow.png" class="input-box__icon"/>
-               <datalist class="input-box__datalist" id="area">
-                  <option value="Экономика"></option>
-                  <option value="Информационные технологии"></option>
-                  <option value="Высший и средний менеджмент"></option>
-                  <option value="Медицина, фармацевтика "></option>
-                  <option value="Продажи, обслуживание клиентов "></option>
-                  <option value="Другое"></option>
+               <input class="input-box__input" input type="text" required list="area"/>
+               <img src="./img/arrow.png" class="input-box__icon" />
+               <datalist class="input-box__datalist" id="area" name="area">
+                  <label>
+                     или выберите из списка:
+                       <select name="area">
+                           <option>Информационные технологии
+                           <option>Высший и средний менеджмент
+                           <option>Медицина, фармацевтика
+                           <option>Продажи, обслуживание клиентов
+                           <option>Другое
+                        </select>
+                     </label>
                   </datalist>
             </div>
+      
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="ABC.ru/"/>
                <img src="./img/global.png" class="input-box__icon_small-18"/>
             </div>
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="vk.com/"/>
                <img src="./img/VK.png" class="input-box__icon_small-18"/>
             </div>
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="ok.com/"/>
                <img src="./img/OK.png" class="input-box__icon_small-18"/>
             </div>
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="facebook.com/"/>
                <img src="./img/facebook.png" class="input-box__icon_big-22"/>
             </div>
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="instagram.com/"/>
                <img src="./img/Instagram.png" class="input-box__icon_small-18"/>
             </div>
          </div>
          <div class="modal__input-box">
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="youtube.com"/>
                <img src="./img/youtube.png" class="input-box__icon_small-18"/>
             </div>
          </div>
          <div class="modal__input-box">
             <span class="lable__txt">Руководитель</span></span>
             <div class="input-box">
-               <input class="input-box__input" input type="text" required />
+               <input class="input-box__input" input type="text" required placeholder="Пётр Петрович Петров"/>
             </div>
          </div>
+      
          <div class="button-box">
             <button class="button-box__button">Стать партнёром проекта</button>
-            <a class="button-box__button_link">отменить</a>
+            <a class="button-box__button_link" id="cancel-button">отменить</a>
          </div>
          
       </form>
    </div>
 
 
+   <div class="main">
+      <h1 class="main__header">Placeholder typicode posts</h1>
+      <div class="main__search-box" >
+         <button class="main__search-box__button" id="clear-button">
+            <span>Clear</span>
+         </button>
+         <input class="main__search-box__input" type="text" placeholder="search" id="search-input"/>
+         <button class="main__search-box__button" id="search-button">
+            <span>Search</span>
+         </button>
+      </div>
+      <a class="main__link-modal" id="main__link-modal">Стать партнёром проекта</a>
+      <div class="main__posts-box">
+         <table class="posts-box" >
+            <tr class="posts-box__row_header">
+               <th class="posts-box__row__title_header" id="title-column">Title</th>
+               <th class="posts-box__row__body_header" id="body-column">Post</th>
+            </tr>
+         </table>
+            <img class="posts-box__loader" src="./img/loading.gif" id="loader"/>
+         
+         <table class="posts-box" id="posts-box">
+            
+         </table>
+      </div>
+   </div>
+
 </body>
-<script type="module" src="./index.js"></script>
-</html>
+<script src="./index.js"></script>
