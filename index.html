@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/svg+xml" href="/img/coders_brotherhood.png" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -15,18 +15,27 @@
 
       <div class="main">
          <div class="main__header"></div>
-         <div class="main__search-box"></div>
+         <div class="main__search-box" >
+            <button class="main__search-box__button" id="clear-button">
+               <span>Clear</span>
+            </button>
+            <input class="main__search-box__input" type="text" placeholder="search" id="search-input"/>
+            <button class="main__search-box__button" id="search-button">
+               <span>Search</span>
+            </button>
+         </div>
+
          <div class="main__posts-box">
             <table class="posts-box" id="posts-box">
-               <tr class="posts-box__row">
+                             <!-- <tr class="posts-box__row">
                   <th class="posts-box__row__title">title</th>
                   <th class="posts-box__row__body">post</th>
                </tr>
+               </tr> -->
             </table>
          </div>
       </div>
-
-      <form class="modal">
+      <form class="modal" >
          <h1 class="modal__header">Стать партнёром проекта</h1>
          <div class="modal__profile">
             <div class="inputs-box">
@@ -56,7 +65,7 @@
                <img class="img-box__img" src="./img/avatar.png"/>
             </div>
          </div>
-
+        
          <div class="modal__input-box">
             <div class="lable">
                <span class="lable__span">✱<span class="lable__txt">Направление</span></span>
@@ -67,9 +76,6 @@
                <datalist class="input-box__datalist" id="area">
                   <option value="Экономика"></option>
                   <option value="Информационные технологии"></option>
-                  <option value="Высший и средний менеджмент"></option>
-                  <option value="Медицина, фармацевтика "></option>
-                  <option value="Продажи, обслуживание клиентов "></option>
                   <option value="Высший и средний менеджмент"></option>
                   <option value="Медицина, фармацевтика "></option>
                   <option value="Продажи, обслуживание клиентов "></option>
@@ -119,7 +125,6 @@
                <input class="input-box__input" input type="text" required />
             </div>
          </div>
-
          <div class="button-box">
             <button class="button-box__button">Стать партнёром проекта</button>
             <a class="button-box__button_link">отменить</a>
@@ -127,6 +132,8 @@
          
       </form>
    </div>
+
+
 </body>
 <script type="module" src="./index.js"></script>
 </html>
