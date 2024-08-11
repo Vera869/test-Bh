@@ -23,6 +23,7 @@
    border-radius: 12px;
    background-color: #fff;
    margin: 101px 263px 300px;
+   display: none;
 }
 .modal__header {
    width: 459px;
@@ -172,4 +173,40 @@
    line-height: 24px;
    text-align: left;
    color: #0848C0;
+}
+
+
+/* main */
+.main {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+   align-items: center;
+   margin: 20px 50px;
+}
+.main__posts-box {
+   width: 70vw;
+   border: 3px solid #fff;
+   border-radius: 20px;
+   padding: 20px;
+}
+.posts-box {
+   padding: 12px;
+   border-collapse: collapse;
+}
+.posts-box__row {
+   width: 70vw;
+   font-family: PT Sans;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   text-align: left;
+   border-bottom: 1px solid #fff;
+}
+.posts-box__row__title {
+   padding: 6px 12px;
+
+}
+.posts-box__row__body {
+   padding: 6px 12px;
 }
